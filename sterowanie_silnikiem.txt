@@ -1,6 +1,3 @@
-//Michał Czerwiński
-//Mateusz Chaszczownik
-
 String x;
 int pos;
 int i=0;
