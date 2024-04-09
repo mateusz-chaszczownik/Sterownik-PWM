@@ -1,0 +1,30 @@
+//Michał Czerwiński
+//Mateusz Chaszczownik
+
+String x;
+int pos;
+int i=0;
+int z;
+
+void setup() { \
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(A0, INPUT);
+  digitalWrite(7, LOW);
+  digitalWrite(8, HIGH);
+  Serial.begin(9600);
+  
+} 
+ 
+void loop() 
+{
+ i++;
+x = Serial.readStringUntil('\n');
+z=x.toInt();
+if(z>0)
+{
+ pos = z; 
+}
+analogWrite(6, pos);
+}
